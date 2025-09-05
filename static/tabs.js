@@ -59,3 +59,5 @@ function newTab(url) {
   
   openTab(tab);
 }
+
+newTab();
