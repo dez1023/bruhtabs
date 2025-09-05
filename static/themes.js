@@ -15,11 +15,25 @@ const themes = {
     "--secondary": "rgb(60,60,80)",
   },
 
-  "poopoo": {
+  "puupu": {
     "--main": "chocolate",
-    "--text": "yellow",
-    "--bg": "brown",
-    "--secondary": "DarkSalmon",
+    "--text": "Moccasin",
+    "--bg": "sienna",
+    "--secondary": "saddlebrown",
+  },
+  
+  "peepi": {
+    "--main": "gold",
+    "--text": "brown",
+    "--bg": "yellow",
+    "--secondary": "orange",
+  },
+  
+  "farte": {
+    "--main": "gold",
+    "--text": "brown",
+    "--bg": "yellow",
+    "--secondary": "orange",
   },
 }
 
