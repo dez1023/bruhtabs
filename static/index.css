@@ -1,0 +1,12 @@
+:root {
+  --main: white;
+  --text: black;
+  --bg: rgb(230,230,230);
+  --secondary: rgb(200,200,255);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
