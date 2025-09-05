@@ -24,3 +24,4 @@ document.querySelectorAll(".page").forEach(page => {
 });
 
 editPageModal.style.display = "none";
+newTab();
