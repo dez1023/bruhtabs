@@ -1,0 +1,31 @@
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.searchBar {
+  all: unset;
+  width: calc(100% - 36px);
+  margin: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: var(--main);
+  text-align: left;
+}
+
+.centeredFrame {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  height: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.centeredFrame > * {
+  display: block;
+  margin: 10px auto;
+}
