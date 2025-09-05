@@ -1,3 +1,5 @@
+const settingsThemes = document.getElementById("settings_themes");
+
 const themes = {
   "light": {
     "--main": "white",
@@ -12,6 +14,12 @@ const themes = {
     "--bg": "rgb(30,30,30)",
     "--secondary": "rgb(60,60,80)",
   },
+
+  "poopoo": {
+    "--main": "chocolate",
+    "--text": "yellow",
+    "--bg": "brown",
+    "--secondary": "DarkSalmon",
 }
 
 function setTheme(themeName) {
@@ -20,3 +28,26 @@ function setTheme(themeName) {
     root.style.setProperty(themeVar, theme[themeVar]);
   });
 }
+
+function createThemeBtn(themeName) {
+  const theme = themes[themeName];
+  const themeBtn = document.createElement("button");
+  const themeCircle = document.createElement("div");
+  themeBtn.classList.add("themeBtn");
+  themeCircle.classList.add("themeCircle");
+  
+  let colors = `${theme["--main"]} ${theme["--main"]} ${theme["--bg"]} ${theme["--secondary"]} `
+  
+  console.log(colors);
+  themeCircle.style.borderColor =  colors;
+  settingsThemes.appendChild(themeBtn);
+  themeBtn.appendChild(themeCircle);
+  themeBtn.innerHTML += themeName;
+  themeBtn.addEventListener("click", function() {
+    setTheme(themeName);
+  })
+}
+
+Object.keys(themes).forEach(themeName => {
+  createThemeBtn(themeName);
+});
