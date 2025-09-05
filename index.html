@@ -1,11 +1,16 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="static/navbar.css">
-    <link rel="stylesheet" href="static/index.css">
+    <base href="https://dez1023.github.io/bruhtabs/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+
+    <script src="static/themes.js"></script>
+    <script src="static/tabs.js"></script>
+    <script src="static/pages.js"></script>
+    <script src="static/index.js"></script>
 
     <div id="navBar">
         <div id="tabBar">
@@ -33,23 +38,18 @@
             </div>
         </div>
     </div>
-    
+
     <div onclick="editPageModal.style.display = 'block'" id="editPage">
-      <a class="title">Edit Page</a>
-      <label for="editPage_HTML">HTML</label>
-      <textarea id="editPage_HTML"></textarea>
-      <label for="editPage_CSS">CSS</label>
-      <textarea id="editPage_CSS"></textarea>
-      <label for="editPage_JS">JS</label>
-      <textarea id="editPage_JS"></textarea>
-      <button id="editPage_saveBtn" onclick="applyPageEdits()">Save</button>
+        <a class="title">Edit Page</a>
+        <label for="editPage_HTML">HTML</label>
+        <textarea id="editPage_HTML"></textarea>
+        <label for="editPage_CSS">CSS</label>
+        <textarea id="editPage_CSS"></textarea>
+        <label for="editPage_JS">JS</label>
+        <textarea id="editPage_JS"></textarea>
+        <button id="editPage_saveBtn" onclick="applyPageEdits()">Save</button>
     </div>
 
 </body>
-
-<script href="static/tabs.js"></script>
-<script href="static/pages.js"></script>
-<script href="static/themes.js"></script>
-<script href="static/index.js"></script>
 
 </html>
