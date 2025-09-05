@@ -20,6 +20,7 @@ const themes = {
     "--text": "yellow",
     "--bg": "brown",
     "--secondary": "DarkSalmon",
+  },
 }
 
 function setTheme(themeName) {
