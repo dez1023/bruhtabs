@@ -30,7 +30,6 @@ function newTab(url) {
   tabBar.appendChild(tab);
   tab.appendChild(tabTitle);
   tab.appendChild(closeBtn);
-  updateTab(tab, url ?? "bruh-tabs://")
   tabs.push(tab);
   
   const clickListener = tab.addEventListener("click", function() {
@@ -56,6 +55,8 @@ function newTab(url) {
     
     tab.remove();
   });
-  
+
+  updateTab(tab, url ?? "bruh-tabs://");
   openTab(tab);
+  return tab;
 }
