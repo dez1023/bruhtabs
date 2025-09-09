@@ -22,6 +22,7 @@ function createPage(url) {
   pages[url] = {
     "page": pageElement,
     "title": "New Page",
+    "connectedTabs": [],
   }
 
   pageElement.style.display = "none";
