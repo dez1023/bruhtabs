@@ -58,6 +58,7 @@ function newTab(url) {
     tab.remove();
   });
 
+  if (!pages[url]) {createPage(url);}
   updateTab(tab, url ?? "bruh-tabs://");
   openTab(tab);
   return tab;
