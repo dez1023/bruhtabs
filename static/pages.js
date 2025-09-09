@@ -23,6 +23,8 @@ function createPage(url) {
     "page": pageElement,
     "title": "New Page",
   }
+
+  pageElement.style.display = "none";
 }
 
 function displayPage(url) {
