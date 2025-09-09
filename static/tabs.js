@@ -15,6 +15,7 @@ function updateTab(tab, url) {
   tab.dataset.url = url;
   
   if (pages[url] && pages[url].title) {
+    console.log("pages[url] exists");
     tab.querySelector("a").textContent = pages[url].title;
   }
   
@@ -58,8 +59,9 @@ function newTab(url) {
     tab.remove();
   });
 
+  const url = url ?? "bruh-tabs://";
   if (!pages[url]) {createPage(url);}
-  updateTab(tab, url ?? "bruh-tabs://");
+  updateTab(tab, url);
   openTab(tab);
   return tab;
 }
