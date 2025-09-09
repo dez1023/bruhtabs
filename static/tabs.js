@@ -19,6 +19,8 @@ function updateTab(tab, url) {
   }
   
   if (currentTab == tab) {displayPage(url);}
+
+  console.log("updated tab with url: "+url)
 }
 
 function newTab(url) {
