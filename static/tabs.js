@@ -12,16 +12,24 @@ function openTab(tab) {
 }
 
 function updateTab(tab, url) {
+  const prevURL = tab.dataset.url;
   tab.dataset.url = url;
+
+  // remove connection to previous page. probly the worst code ever
+  if (prevURL && pages[prevURL].connectedTabs && pages[prevURL].connectedTabs.find(tab) {
+    const index = pages[prevURL].connectedTabs.indexOf(tab);
+    pages[prevURL].connectedTabs.splice(index, 1);
+  }
   
   if (pages[url] && pages[url].title) {
-    console.log("pages[url] exists");
+    // connect to new page
+    if (pages[url].connectedTabs && !pages[url].connectedTabs.find(tab)) {
+      pages[url].connectedTabs.push(tab);
+    }
     tab.querySelector("a").textContent = pages[url].title;
   }
   
   if (currentTab == tab) {displayPage(url);}
-
-  console.log("updated tab with url: "+url)
 }
 
 function newTab(url) {
